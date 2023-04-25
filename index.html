@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Visualizer</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.js"></script>
+  <script src="visualizer.js"></script>
+</head>
+<body>
+  <button id="startButton" onclick="startVisualizer();">Start</button>
+  <br>
+  <label for="numParticles">Number of Particles:</label>
+  <input type="number" id="numParticles" min="1" max="5000" value="1000" onchange="updateNumParticles(this.value);">
+  <br>
+  <label for="particleShape">Particle Shape:</label>
+  <select id="particleShape" onchange="updateParticleShape(this.value);">
+    <option value="ellipse">Ellipse</option>
+    <option value="rect">Rectangle</option>
+    <option value="triangle" selected>Triangle</option>
+  </select>
+  <br>
+  <label for="micSensitivity">Mic Sensitivity:</label>
+  <input type="range" id="micSensitivity" min="1" max="10" value="4" oninput="updateMicSensitivity(this.value);">
+</body>
+</html>
